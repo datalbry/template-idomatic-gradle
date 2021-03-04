@@ -1,0 +1,56 @@
+:hide-uri-scheme:
+:toc: preamble
+
+= Idiomatic Gradle
+
+This repository shows a simple way on how to use Gradle for multi-module projects, while respecting best-practices
+for publishing, static analysis and publishing. We personally felt overwhelmed by all possibilities gradle provides,
+but wished we had some guidance at the very start. May the repository aid you and provide at least some guidance or
+inspiration on how gradle can be used.
+
+== Multi-Module
+
+
+== Conventions
+
+=== Kotlin
+
+=== Java
+
+=== Application
+
+=== Repository
+
+=== Maven-Publish
+
+== Contributors
+
+* link:https://github.com/mazorius[Ron Gebauer]
+* link:https://github.com/Lacritz[Timo Gruen]
+
+Any further contributors are highly welcome, just send a merge request, and we are happy to merge it as long as it
+makes sense for the repository as is.
+
+=== Inspiration
+
+* link:https://github.com/jjohannes/idiomatic-gradle[]
+
+== Code of Conduct
+
+== License
+
+....
+Copyright 2021 DataLbry.io
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+....
