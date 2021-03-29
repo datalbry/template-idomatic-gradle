@@ -1,6 +1,8 @@
+@file:Suppress("UnstableApiUsage")
+
 /*
- * The maven-publish convention contains
- */
+* The maven-publish convention contains
+*/
 plugins {
     id("maven-publish")
 }
@@ -37,10 +39,15 @@ configure<PublishingExtension> {
                 //if (project.pluginManager.hasPlugin("springboot-string"))
                 from(components["java"])
             }
-//            TODO("Check for spring boot")
-//            project.pluginManager.withPlugin("springboot-string") {
-//                from(project.tasks.withType(BootJar::class))
-//            }
+            project.pluginManager.withPlugin("distribution") {
+                if (project.pluginManager.hasPlugin("org.springframework.boot")) {
+                    artifact(project.tasks.named("bootDistZip").get())
+                    artifact(project.tasks.named("bootDistTar").get())
+                } else {
+                    artifact(project.tasks.named("distZip").get())
+                    artifact(project.tasks.named("distTar").get())
+                }
+            }
         }
     }
 }

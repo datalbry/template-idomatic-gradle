@@ -1,6 +1,5 @@
-/*
- *
- */
+@file:Suppress("UnstableApiUsage")
+
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -12,7 +11,7 @@ plugins {
      * The `java` plugin is also present on the classpath - if you really (for unknown reasons) don't want it
      * to be enabled, just copy everything from within the java-convention and remove the id("datalbry.java") here
      */
-    id("datalbry.java")
+    id("example.java")
 
     /*
      * The explicit version is already provided by Gradle (6.8.1 is providing Kotlin 1.4.20).
@@ -26,6 +25,6 @@ plugins {
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "1.8"
+        jvmTarget = the<JavaPluginExtension>().toolchain.languageVersion.get().toString()
     }
 }
